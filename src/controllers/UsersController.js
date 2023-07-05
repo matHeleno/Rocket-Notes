@@ -65,7 +65,7 @@ class UsersControler {
     }
     
 
-    await database.run('update users set name = ?, email = ?, password = ?, updated_at = datetime("now") where id = ?', [user.name, user.email, user.password, id])
+    await database.run('update users set name = ?, email = ?, password = ?, updatedat = datetime("now") where id = ?', [user.name, user.email, user.password, id])
 
     return response.status(200).json()
   }
